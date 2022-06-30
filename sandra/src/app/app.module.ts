@@ -14,6 +14,7 @@ import { ProductComponent } from './component/product/product.component';
     CartComponent,
     ProductComponent
   ],
+
   imports: [
     BrowserModule,
     AppRoutingModule
