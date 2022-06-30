@@ -4,8 +4,8 @@ import { CartService } from 'src/app/service/cart.service';
 
 @Component({
   selector: 'app-products',
-  templateUrl: './products.component.html',
-  styleUrls: ['./products.component.scss']
+  templateUrl: './product.component.html',
+  styleUrls: ['./product.component.scss']
 })
 export class ProductsComponent implements OnInit {
 
@@ -20,8 +20,8 @@ export class ProductsComponent implements OnInit {
       this.productList = res;
       this.filterCategory = res;
       this.productList.forEach((a:any) => {
-        if(a.category ==="women's clothing" || a.category ==="men's clothing"){
-          a.category ="fashion"
+        if(a.category ==="Fiction" || a.category ==="Fiction"){
+          a.category ="Fiction"
         }
         Object.assign(a,{quantity:1,total:a.price});
       });
