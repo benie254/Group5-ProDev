@@ -1,0 +1,22 @@
+<h1>{{ title }}</h1>
+<ul>
+    <li *ngFor="let user of users">{{user.title}} ~by~{{user.author}}</li>
+</ul>
+<form #usersForm="ngForm" (ngSubmit)="submitBookForm(usersForm.value)">
+    <div class="form-group input-group">
+        <input type="text" ngModel name="title" class="form-control" placeholder="Enter Name">
+        <br><br>
+        <input type="text" ngModel name="author" class="form-control" placeholder="Enter Author">
+        <br><br>
+        <input type="text" ngModel name="description" class="form-control" placeholder="Description">
+        <br><br>
+        <input type="text" ngModel name="publisher" class="form-control" placeholder="Enter Publisher">
+        <br><br>
+    </div>
+    <div class="form-group">
+        <button>Add New Book</button>
+    </div>
+</form>
+<app-users></app-users>
+<app-userdetail></app-userdetail>
+<app-footer></app-footer>

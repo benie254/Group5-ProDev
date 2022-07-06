@@ -29,7 +29,7 @@
 
 <div class="container">
     <div class="row">
-        <ng-container *ngFor="let item of filterCategory | filter:searchKey:'all books'">
+        <ng-container *ngFor="let item of productList | filter:searchKey:'all books'">
             <div class="card col-md-3">
                 <img src="{{item.image}}" alt="">
                 <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.author}}</h5>
