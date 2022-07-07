@@ -8,9 +8,11 @@ import { FormsModule } from '@angular/forms';
 import { UsersComponent } from './component/users/users.component';
 import { UserdetailComponent } from './component/userdetail/userdetail.component';
 import { FooterComponent } from './component/footer/footer.component';
+import { HeaderComponent } from './component/header/header.component';
+
 
 @NgModule({
-  declarations: [AppComponent, UsersComponent, UserdetailComponent, FooterComponent],
+  declarations: [AppComponent, UsersComponent, UserdetailComponent, FooterComponent, HeaderComponent],
   imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
   providers: [],
   bootstrap: [AppComponent],

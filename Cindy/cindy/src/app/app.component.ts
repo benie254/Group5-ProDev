@@ -11,13 +11,16 @@ import { BookServiceService } from './services/book-service.service';
   styleUrls: ['./app.component.css'],
 })
 export class AppComponent implements OnInit {
-  title = 'Posts';
+  title = 'Books';
   users: any;
   private user: Root = {
     title: '',
     author: '',
     description: '',
     publisher: '',
+    image: undefined,
+    category: '',
+    price: 0
   };
 
   constructor(
@@ -39,10 +42,14 @@ export class AppComponent implements OnInit {
   }
   submitBookForm(book_data: any) {
     console.warn(book_data);
-    this.bookService.addBook(book_data).subscribe((result) => {
-      console.warn(result);
-      // this.addBook=result
+    this.http.post('https://gfive.herokuapp.com/api/books/', book_data).subscribe((result)=>{
+      console.warn('result', result)
     });
+
+    // this.bookService.addBook(book_data).subscribe((result) => {
+    //   console.warn(result);
+      // this.addBook=result
+    // });
   }
 
   ngOnInit(): void {
