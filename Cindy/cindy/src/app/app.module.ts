@@ -9,13 +9,30 @@ import { UsersComponent } from './component/users/users.component';
 import { UserdetailComponent } from './component/userdetail/userdetail.component';
 import { FooterComponent } from './component/footer/footer.component';
 import { HeaderComponent } from './component/header/header.component';
+import { AddPostComponent } from './component/add-post/add-post.component';
 
 
 @NgModule({
-  declarations: [AppComponent, UsersComponent, UserdetailComponent, FooterComponent, HeaderComponent],
-  imports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  declarations: [
+    AppComponent, 
+    UsersComponent, 
+    UserdetailComponent, 
+    FooterComponent, 
+    HeaderComponent, 
+    AddPostComponent
+  ],
+  imports: [
+    BrowserModule, 
+    AppRoutingModule, 
+    HttpClientModule, 
+    FormsModule
+  ],
   providers: [],
   bootstrap: [AppComponent],
-  exports: [BrowserModule, AppRoutingModule, HttpClientModule, FormsModule],
+  exports: [BrowserModule, 
+    AppRoutingModule, 
+    HttpClientModule, 
+    FormsModule
+  ],
 })
 export class AppModule {}
