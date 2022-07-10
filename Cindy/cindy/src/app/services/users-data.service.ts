@@ -5,7 +5,7 @@ import { HttpClient } from '@angular/common/http';
   providedIn: 'root',
 })
 export class UsersDataService {
-  url = 'https://gfive.herokuapp.com/api/books/';
+  url = 'https://gfive.herokuapp.com/api/books/<int:pk>/';
 
   constructor(private http: HttpClient) {}
   users() {
@@ -14,5 +14,4 @@ export class UsersDataService {
   saveUser(data: any) {
     return this.http.post(this.url, data);
   }
-  
 }

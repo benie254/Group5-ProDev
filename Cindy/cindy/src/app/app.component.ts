@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { UserService } from './services/user.service';
 import { Root } from './interface/root';
 import { UsersDataService } from './services/users-data.service';
-import { BookServiceService } from './services/book-service.service';
 
 @Component({
   selector: 'app-root',
@@ -18,17 +17,15 @@ export class AppComponent implements OnInit {
     author: '',
     description: '',
     publisher: '',
-    image: undefined,
+    imageUrl: undefined,
     category: '',
-    price: 0
+    price: 0,
   };
 
   constructor(
     private http: HttpClient,
     private userService: UserService,
     private UsersData: UsersDataService,
-    private bookService: BookServiceService
-  
   ) {
     this.UsersData.users().subscribe((data) => {
       this.users = data;

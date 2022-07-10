@@ -4,7 +4,7 @@
 
 export const environment = {
   production: false,
-  apiUrl: 'https://gfive.herokuapp.com/api/books/'
+  apiUrl: 'https://gfive.herokuapp.com/api/books/',
 };
 
 /*
