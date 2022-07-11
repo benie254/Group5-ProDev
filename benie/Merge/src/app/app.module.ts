@@ -7,11 +7,21 @@ import { FormsModule } from '@angular/forms';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SearchComponent } from './components/search/search.component';
+import { AddPostComponent } from './component/add-post/add-post.component';
+import { FooterComponent } from './component/footer/footer.component';
+import { HeaderComponent } from './component/header/header.component';
+import { UserdetailComponent } from './component/userdetail/userdetail.component';
+import { UsersComponent } from './component/users/users.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SearchComponent
+    SearchComponent,
+    AddPostComponent,
+    FooterComponent,
+    HeaderComponent,
+    UserdetailComponent,
+    UsersComponent
   ],
   imports: [
     BrowserModule,
