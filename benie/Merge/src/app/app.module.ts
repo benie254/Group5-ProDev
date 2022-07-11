@@ -13,6 +13,9 @@ import { HeaderComponent } from './component/header/header.component';
 import { UserdetailComponent } from './component/userdetail/userdetail.component';
 import { UsersComponent } from './component/users/users.component';
 
+import { CommentsModule } from './comments.module';
+
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -21,14 +24,15 @@ import { UsersComponent } from './component/users/users.component';
     FooterComponent,
     HeaderComponent,
     UserdetailComponent,
-    UsersComponent
+    UsersComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
     Ng2SearchPipeModule,
-    FormsModule
+    FormsModule,
+    CommentsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
