@@ -1,6 +1,6 @@
 export interface Root {
   id?: number;
-  imageUrl: any;
+  image: any;
   title: string;
   category: string;
   author: string;
