@@ -24,5 +24,4 @@ export class UserService {
   createUser(user: Root): Observable<Root> {
     return this.http.post<Root>(`${this.apiUrl}`, user);
   }
- 
 }
