@@ -2,6 +2,7 @@
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item active" aria-current="page">Home</li>
+            <li class="breadcrumb-item"><a href="addBook">Add A New Book</a></li>
         </ol>
     </nav>
     <div class="row">
@@ -14,7 +15,7 @@
               <p class="card-text">{{ user.author }}</p>
               <small>{{ user.description }}</small>
               <div class="card-footer bg-transparent border-success">
-                  <a href="user/:uuid" class="btn btn-primary btn-sm">view</a>
+                  <button [routerLink]="['users/:id/{{user.id}}']" type="button" class="btn btn-primary btn-sm">view</button>
               </div>
               
             </div>

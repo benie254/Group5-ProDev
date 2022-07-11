@@ -16,7 +16,7 @@ export class UsersComponent implements OnInit {
     author: '',
     description: '',
     publisher: '',
-    imageUrl: undefined,
+    image: undefined,
     category: '',
     price: 0,
   };
