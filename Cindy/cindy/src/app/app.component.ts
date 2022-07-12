@@ -3,7 +3,6 @@ import { HttpClient } from '@angular/common/http';
 import { UserService } from './services/user.service';
 import { Root } from './interface/root';
 import { UsersDataService } from './services/users-data.service';
-import { BookServiceService } from './services/book-service.service';
 
 @Component({
   selector: 'app-root',
@@ -18,17 +17,15 @@ export class AppComponent implements OnInit {
     author: '',
     description: '',
     publisher: '',
-    image: undefined,
+    image: '',
     category: '',
-    price: 0
+    price: '',
   };
 
   constructor(
     private http: HttpClient,
     private userService: UserService,
     private UsersData: UsersDataService,
-    private bookService: BookServiceService
-  
   ) {
     this.UsersData.users().subscribe((data) => {
       this.users = data;
@@ -54,28 +51,28 @@ export class AppComponent implements OnInit {
 
   ngOnInit(): void {
     // this.onGetUser();
-    this.onGetUsers();
+    // this.onGetUsers();
     // this.onCreateUser();
   }
-  onGetUsers(): void {
-    this.userService.getUsers().subscribe(
-      (response) => console.table(response),
-      (error: any) => console.log(error),
-      () => console.log('Done getting users')
-    );
-  }
-  onGetUser(): void {
-    this.userService.getUser().subscribe(
-      (response) => console.log(response),
-      (error: any) => console.log(error),
-      () => console.log('Done getting user')
-    );
-  }
-  onCreateUser(): void {
-    this.userService.createUser(this.user).subscribe(
-      (response) => console.log(response),
-      (error: any) => console.log(error),
-      () => console.log('Done creating user')
-    );
-  }
+  // onGetUsers(): void {
+  //   this.userService.getUsers().subscribe(
+  //     (response) => console.table(response),
+  //     (error: any) => console.log(error),
+  //     () => console.log('Done getting users')
+  //   );
+  // }
+  // onGetUser(): void {
+  //   this.userService.getUser().subscribe(
+  //     (response) => console.log(response),
+  //     (error: any) => console.log(error),
+  //     () => console.log('Done getting user')
+  //   );
+  // }
+  // onCreateUser(): void {
+  //   this.userService.createUser(this.user).subscribe(
+  //     (response) => console.log(response),
+  //     (error: any) => console.log(error),
+  //     () => console.log('Done creating user')
+  //   );
+  // }
 }
