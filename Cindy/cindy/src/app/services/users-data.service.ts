@@ -16,7 +16,7 @@ export class UsersDataService {
   saveUser(data: any) {
     return this.http.post(this.url, data);
   }
-  getUser(id: number = 1): Observable<Root> {
-    return this.http.get<Root>(`${this.url}`);
+  getUser(id: number=1): Observable<Root> {
+    return this.http.get<Root>(`${this.url + id}`);
   }
 }

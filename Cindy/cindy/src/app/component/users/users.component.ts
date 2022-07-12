@@ -16,22 +16,21 @@ export class UsersComponent implements OnInit {
     author: '',
     description: '',
     publisher: '',
-    image: undefined,
+    image: '',
     category: '',
-    price: 0,
+    price: '',
   };
 
-  constructor(
-    private http: HttpClient,
-    private userService: UserService,
-  ) {
-  
-  }
+  constructor(private http: HttpClient, private userService: UserService) {}
 
   ngOnInit(): void {
-    this.userService.getUsers().subscribe((results: any) => {
-      console.log(results);
-      this.users = results;
-    });
+    // this.userService.getUsers().subscribe((results: Root[]) => {
+    //   console.log(results);
+    //   this.users = results;
+    // });
+    this.onGetUsers();
+  }
+  onGetUsers(){
+    this.userService.getUsers().subscribe((data:Root[]) => this.users = data)
   }
 }
