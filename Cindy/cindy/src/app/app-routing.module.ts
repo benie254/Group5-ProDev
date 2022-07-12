@@ -6,7 +6,7 @@ import { AddPostComponent } from './component/add-post/add-post.component';
 
 const routes: Routes = [
   { path: 'users', component: UsersComponent },
-  { path: 'users/:id', component: UserdetailComponent },
+  { path: 'user/:id', component: UserdetailComponent },
   { path: 'addBook', component: AddPostComponent},
   { path: '**', redirectTo:'users' },
 ];
