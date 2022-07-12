@@ -9,7 +9,7 @@ export class CommentsService {
 
   getComments(): Observable<CommentInterface[]> {
     return this.httpClient.get<CommentInterface[]>(
-      'https://gfive.herokuapp.com/api/books/comments/'
+      'https://gfive.herokuapp.com/api/books/$%7Bid%7D/comments'
     );
   }
 
@@ -18,7 +18,7 @@ export class CommentsService {
     parentId: string | null = null
   ): Observable<CommentInterface> {
     return this.httpClient.post<CommentInterface>(
-      'https://gfive.herokuapp.com/api/books/',
+      'https://gfive.herokuapp.com/api/books/$%7Bid%7D/comments',
       {
         body: text,
         parentId,
@@ -32,7 +32,7 @@ export class CommentsService {
 
   updateComment(id: string, text: string): Observable<CommentInterface> {
     return this.httpClient.patch<CommentInterface>(
-      `https://gfive.herokuapp.com/api/books/${id}`,
+      `https://gfive.herokuapp.com/api/books/$%7Bid%7D/comments`,
       {
         body: text,
       }
@@ -40,6 +40,6 @@ export class CommentsService {
   }
 
   deleteComment(id: string): Observable<{}> {
-    return this.httpClient.delete(`https://gfive.herokuapp.com/api/books/${id}`);
+    return this.httpClient.delete(`https://gfive.herokuapp.com/api/books/$%7Bid%7D/comments`);
   }
 }
