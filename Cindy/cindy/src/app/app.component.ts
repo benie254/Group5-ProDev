@@ -31,12 +31,12 @@ export class AppComponent implements OnInit {
       this.users = data;
     });
   }
-  getUserFormData(data: any) {
-    console.warn(data);
-    this.UsersData.saveUser(data).subscribe((data) => {
-      console.warn(data);
-    });
-  }
+  // getUserFormData(data: any) {
+  //   console.warn(data);
+  //   this.UsersData.saveUser(data).subscribe((data) => {
+  //     console.warn(data);
+  //   });
+  // }
   submitBookForm(book_data: any) {
     console.warn(book_data);
     this.http.post('https://gfive.herokuapp.com/api/books/', book_data).subscribe((result)=>{
