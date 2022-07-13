@@ -1,0 +1,12 @@
+body{
+    background-color: rgb(234, 246, 251);
+}
+
+
+.checked {
+    color: orange;
+  }
+
+  .checked:hover{
+      color: darkblue;
+  }

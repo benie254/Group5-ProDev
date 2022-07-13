@@ -5,12 +5,24 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ReaderprofileComponent } from './readerprofile/readerprofile.component';
+import { BookslistComponent } from './bookslist/bookslist.component';
+import { LoginComponent } from './login/login.component';
+import { ProductsComponent } from './products/products.component';
+import { ProfileComponent } from './profile/profile.component';
+import { CartComponent } from './cart/cart.component';
+import { StarsComponent } from './stars/stars.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    ReaderprofileComponent
+    ReaderprofileComponent,
+    BookslistComponent,
+    LoginComponent,
+    ProductsComponent,
+    ProfileComponent,
+    CartComponent,
+    StarsComponent
   ],
   imports: [
     BrowserModule,
