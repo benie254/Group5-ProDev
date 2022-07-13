@@ -4,15 +4,15 @@ from rest_framework.exceptions import AuthenticationFailed
 from .serializers import UserSerializer
 from .models import User
 import jwt, datetime
+from rest_framework.generics import CreateAPIView
+from rest_framework import permissions
 
 
 # Create your views here.
-class RegisterView(APIView):
-    def post(self, request):
-        serializer = UserSerializer(data=request.data)
-        serializer.is_valid(raise_exception=True)
-        serializer.save()
-        return Response(serializer.data)
+class RegisterView(CreateAPIView):
+        model = User.objects.all()
+        permission_classes = [permissions.AllowAny]
+        serializer_class = UserSerializer
 
 
 class LoginView(APIView):
