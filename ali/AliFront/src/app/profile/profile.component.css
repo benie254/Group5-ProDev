@@ -15,16 +15,18 @@ body {
 body {
     display: grid;
     place-items: center;
-    background: #edbdf5
+    background: #f5f5f5
 }
 
 .card {
 	color:#fff;
     width: 350px;
+    margin-top: 10rem;
+    margin-bottom: 10rem;
     border-radius: 10px;
-   background: linear-gradient(145deg, #9a40a9, #b74cc9);
+   background: linear-gradient(145deg, #2c0233, #b74cc9);
 box-shadow:  20px 20px 60px #913ca0, 
-             -20px -20px 60px #c552d8;
+             -20px -20px 60px #e196ef;
     border: none
 }
 
