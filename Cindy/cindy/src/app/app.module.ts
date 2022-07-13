@@ -4,7 +4,7 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HttpClientModule } from '@angular/common/http';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { UsersComponent } from './component/users/users.component';
 import { UserdetailComponent } from './component/userdetail/userdetail.component';
 import { FooterComponent } from './component/footer/footer.component';
@@ -25,7 +25,8 @@ import { AddPostComponent } from './component/add-post/add-post.component';
     BrowserModule, 
     AppRoutingModule, 
     HttpClientModule, 
-    FormsModule
+    FormsModule,
+    ReactiveFormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent],

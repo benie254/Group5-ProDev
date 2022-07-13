@@ -2,7 +2,10 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { HttpClientModule } from '@angular/common/http';
 import { Ng2SearchPipeModule } from 'ng2-search-filter';
-import { FormsModule } from '@angular/forms';
+import { FormsModule,ReactiveFormsModule } from '@angular/forms';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { NgxStarRatingModule } from 'ngx-star-rating';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -14,6 +17,14 @@ import { UserdetailComponent } from './component/userdetail/userdetail.component
 import { UsersComponent } from './component/users/users.component';
 
 import { CommentsModule } from './comments.module';
+import { NavComponent } from './auth/nav/nav.component';
+import { RegisterComponent } from './auth/register/register.component';
+import { LoginComponent } from './auth/login/login.component';
+import { HomeComponent } from './auth/home/home.component';
+import { CartComponent } from './component/cart/cart.component';
+import { FilterPipe } from './shared/filter.pipe';
+import { ProductsComponent } from './component/products/products.component';
+import { RatingfeatureComponent } from './components/ratingfeature/ratingfeature.component';
 
 
 @NgModule({
@@ -25,6 +36,14 @@ import { CommentsModule } from './comments.module';
     HeaderComponent,
     UserdetailComponent,
     UsersComponent,
+    HomeComponent,
+    LoginComponent,
+    NavComponent,
+    RegisterComponent,
+    CartComponent,
+    ProductsComponent,
+    FilterPipe,
+    RatingfeatureComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,6 +52,9 @@ import { CommentsModule } from './comments.module';
     Ng2SearchPipeModule,
     FormsModule,
     CommentsModule,
+    ReactiveFormsModule,
+    NgxStarRatingModule,
+    BrowserAnimationsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
