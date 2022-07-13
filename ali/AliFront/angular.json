@@ -27,6 +27,7 @@
               "src/assets"
             ],
             "styles": [
+              
               "src/styles.css"
             ],
             "scripts": []
@@ -96,7 +97,9 @@
             "styles": [
               "src/styles.css"
             ],
-            "scripts": []
+            "scripts": [
+              "ali/AliFront/src/app/stars/rating.js"
+            ]
           }
         }
       }
