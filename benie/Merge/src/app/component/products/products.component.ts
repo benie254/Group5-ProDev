@@ -35,7 +35,7 @@ export class ProductsComponent implements OnInit {
   addtocart(item: any){
     this.cartService.addtoCart(item);
   }
-  filter(category:string){
+  filter2(category:string){
     this.filterCategory = this.productList
     .filter((a:any)=>{
       if(a.category == category || category==''){

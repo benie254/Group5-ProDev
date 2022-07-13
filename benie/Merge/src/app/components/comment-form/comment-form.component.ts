@@ -2,10 +2,12 @@ import { Component, EventEmitter, Input, OnInit, Output } from '@angular/core';
 import { FormBuilder, FormGroup, Validators } from '@angular/forms';
 
 @Component({
-  selector: 'comment-form',
-  templateUrl: './commentForm.component.html',
+  selector: 'app-comment-form',
+  templateUrl: './comment-form.component.html',
+  styleUrls: ['./comment-form.component.css']
 })
 export class CommentFormComponent implements OnInit {
+
   @Input() submitLabel!: string;
   @Input() hasCancelButton: boolean = false;
   @Input() initialText: string = '';
@@ -30,4 +32,5 @@ export class CommentFormComponent implements OnInit {
     this.handleSubmit.emit(this.form.value.title);
     this.form.reset();
   }
+
 }

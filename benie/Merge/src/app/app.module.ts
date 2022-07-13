@@ -22,9 +22,12 @@ import { RegisterComponent } from './auth/register/register.component';
 import { LoginComponent } from './auth/login/login.component';
 import { HomeComponent } from './auth/home/home.component';
 import { CartComponent } from './component/cart/cart.component';
-import { FilterPipe } from './shared/filter.pipe';
+import { Filter2Pipe } from './shared/filter2.pipe';
 import { ProductsComponent } from './component/products/products.component';
 import { RatingfeatureComponent } from './components/ratingfeature/ratingfeature.component';
+import { CommentComponent } from './components/comment/comment.component';
+import { CommentFormComponent } from './components/comment-form/comment-form.component';
+import { CommentsComponent } from './components/comments/comments.component';
 
 
 @NgModule({
@@ -42,8 +45,11 @@ import { RatingfeatureComponent } from './components/ratingfeature/ratingfeature
     RegisterComponent,
     CartComponent,
     ProductsComponent,
-    FilterPipe,
+    Filter2Pipe,
     RatingfeatureComponent,
+    CommentComponent,
+    CommentFormComponent,
+    CommentsComponent
   ],
   imports: [
     BrowserModule,

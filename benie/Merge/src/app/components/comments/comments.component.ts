@@ -4,10 +4,12 @@ import { ActiveCommentInterface } from '../../types/activeComment.interface';
 import { CommentInterface } from '../../types/comment.interface';
 
 @Component({
-  selector: 'comments',
+  selector: 'app-comments',
   templateUrl: './comments.component.html',
+  styleUrls: ['./comments.component.css']
 })
 export class CommentsComponent implements OnInit {
+
   @Input() currentUserId!: string;
 
   comments: CommentInterface[] = [];
@@ -81,4 +83,5 @@ export class CommentsComponent implements OnInit {
           new Date(a.createdAt).getTime() - new Date(b.createdAt).getTime()
       );
   }
+
 }
