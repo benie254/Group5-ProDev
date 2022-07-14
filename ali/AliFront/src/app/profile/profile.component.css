@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Noto+Sans&display=swap');
 
 * {
     margin: 0;
@@ -91,4 +91,18 @@ background: #e2a2ed;
 box-shadow:  28px 28px 57px #933da2, 
              -28px -28px 57px #c351d6;
 	
+} */
+
+
+#main{
+    height: 100vh;
+}
+
+#profile{
+    margin-top: 10rem;
+    color: white;
+}
+
+.card{
+    background-color: #8e9802;
 }
