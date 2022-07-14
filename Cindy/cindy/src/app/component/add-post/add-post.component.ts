@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersDataService } from 'src/app/services/users-data.service';
+import { BookServiceService } from 'src/app/services/book-service.service'; 
 import { HttpClient } from '@angular/common/http';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+
 @Component({
   selector: 'app-add-post',
   templateUrl: './add-post.component.html',
@@ -15,7 +17,7 @@ export class AddPostComponent implements OnInit {
     description: new FormControl('', [Validators.required]),
     publisher: new FormControl('', [Validators.required]),
   });
-  constructor(public UsersData: UsersDataService, private http: HttpClient) {
+  constructor(public UsersData: UsersDataService, private http: HttpClient, public BookService: BookServiceService) {
     // this.books = UsersData.saveUser(data)
     // this.UsersData.users().subscribe((data) => {
     //   this.users = data;
@@ -28,7 +30,7 @@ export class AddPostComponent implements OnInit {
     console.warn(this.postForm.value);
     console.log(book_data);
 
-    this.UsersData.saveUser(book_data).subscribe(res=>{
+    this.BookService.saveUser(book_data).subscribe(res=>{
       alert(res.toString());
     },(error)=>{console.log(error)});
 
