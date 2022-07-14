@@ -6,7 +6,7 @@ import { User } from '../interface/user';
   providedIn: 'root',
 })
 export class ProfileService {
-  url = 'https://gfive.herokuapp.com/api/user/';
+  url = 'https://gfive.herokuapp.com/api/user/profile/';
 
   constructor(private http: HttpClient) {}
   getAllUsers(): Observable<User[]> {
