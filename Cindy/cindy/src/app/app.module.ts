@@ -10,6 +10,7 @@ import { UserdetailComponent } from './component/userdetail/userdetail.component
 import { FooterComponent } from './component/footer/footer.component';
 import { HeaderComponent } from './component/header/header.component';
 import { AddPostComponent } from './component/add-post/add-post.component';
+import { UserProfileComponent } from './component/user-profile/user-profile.component';
 
 
 @NgModule({
@@ -19,7 +20,7 @@ import { AddPostComponent } from './component/add-post/add-post.component';
     UserdetailComponent, 
     FooterComponent, 
     HeaderComponent, 
-    AddPostComponent
+    AddPostComponent, UserProfileComponent
   ],
   imports: [
     BrowserModule, 

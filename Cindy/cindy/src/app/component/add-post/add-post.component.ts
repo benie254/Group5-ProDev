@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { UsersDataService } from 'src/app/services/users-data.service';
+import { BookServiceService } from 'src/app/services/book-service.service'; 
 import { HttpClient } from '@angular/common/http';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
+
 @Component({
   selector: 'app-add-post',
   templateUrl: './add-post.component.html',
@@ -15,18 +17,35 @@ export class AddPostComponent implements OnInit {
     description: new FormControl('', [Validators.required]),
     publisher: new FormControl('', [Validators.required]),
   });
-  constructor(private UsersData: UsersDataService, private http: HttpClient) {
-    this.UsersData.users().subscribe((data) => {
-      this.users = data;
-    });
+  constructor(private http: HttpClient, public BookService: BookServiceService) {
+    // this.books = UsersData.saveUser(data)
+    // this.UsersData.users().subscribe((data) => {
+    //   this.users = data;
+    // });
   }
+
   submitBookForm(book_data: any) {
+    // let data = { title: 'e', author: 'r', description: 'p', publisher: 'k' };
+
     console.warn(this.postForm.value);
-    this.http
-      .post('http://127.0.0.1:8000/api/books/', book_data)
-      .subscribe((result) => {
-        console.warn('result', result);
-      });
+    console.log(book_data);
+
+    this.BookService.saveUser(book_data).subscribe(res=>{
+      alert(res.toString());
+    },(error)=>{console.log(error)});
+
+    // this.UsersData.getUsers(book_data)
+    // this.http.post<any>('http://127.0.0.1:8000/api/books/', data).subscribe(
+    //   (result) => {
+    //     this.users = result;
+    //     console.log(this.users);
+    //     console.log(result);
+    //     console.warn('result', result);
+    //   },
+    //   (error) => {
+    //     console.log(error);
+    //   }
+    // );
   }
   get title() {
     return this.postForm.get('title');
@@ -42,4 +61,3 @@ export class AddPostComponent implements OnInit {
   }
   ngOnInit(): void {}
 }
-
