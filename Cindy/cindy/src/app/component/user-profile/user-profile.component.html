@@ -1,4 +1,4 @@
-<div class="container" *ngIf="profile !== undefined">
+<div class="container" *ngIf="profile !== undefined ">
     <nav aria-label="breadcrumb">
         <ol class="breadcrumb">
             <li class="breadcrumb-item ml-auto"><a href="users"><i class="fa fa-arrow-left" aria-hidden="true"></i></a></li>
@@ -14,9 +14,8 @@
         <div class="description">
         I use to design websites and applications
         for the web.
-    </div>
-    <div class="contacts">
-       <small>{{ profile.email }}</small>
+        <br>
+        <div><em><b>{{ profile.email }}</b></em></div>
     </div>
     <ul class="data">
         <li>
