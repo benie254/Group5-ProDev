@@ -25,6 +25,10 @@ export class UserdetailComponent implements OnInit {
     id: 0,
     name: '',
     email: '',
+    user: undefined,
+    profile_picture: '',
+    bio: '',
+    phone_number: ''
   };
   constructor(
     private UsersData: UsersDataService,
