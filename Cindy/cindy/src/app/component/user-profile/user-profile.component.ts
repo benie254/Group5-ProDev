@@ -15,7 +15,11 @@ export class UserProfileComponent implements OnInit {
   profile: User={
     id: 0,
     name: '',
-    email: ''
+    email: '',
+    user: undefined,
+    profile_picture: '',
+    bio: '',
+    phone_number: ''
   };
 
   ngOnInit(): void {

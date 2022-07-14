@@ -17,7 +17,7 @@ export class AddPostComponent implements OnInit {
     description: new FormControl('', [Validators.required]),
     publisher: new FormControl('', [Validators.required]),
   });
-  constructor(public UsersData: UsersDataService, private http: HttpClient, public BookService: BookServiceService) {
+  constructor(private http: HttpClient, public BookService: BookServiceService) {
     // this.books = UsersData.saveUser(data)
     // this.UsersData.users().subscribe((data) => {
     //   this.users = data;
