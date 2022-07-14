@@ -17,7 +17,7 @@ export class UsersDataService {
     return this.http.get(this.url);
   }
   
-  getUser(id: number = 1): Observable<Root> {
-    return this.http.get<Root>(`${this.url + id}`);
+  getUser(id:number): Observable<Root> {
+    return this.http.get<Root>(this.url + id);
   }
 }
