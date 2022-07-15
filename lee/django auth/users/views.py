@@ -16,7 +16,7 @@ class RegisterView(APIView):
         serializer.is_valid(raise_exception=True)
         email=serializer.validated_data['email']
         serializer.save()
-        send_mail('Welcome', 'Good to have you on board', 'doyoadoyo@gmail.com', [email], fail_silently=False)
+        send_mail('Welcome', 'Good to have you on board', 'leonk8070@gmail.com', [email], fail_silently=False)
         return Response(serializer.data)
 
 
