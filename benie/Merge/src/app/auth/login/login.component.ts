@@ -26,7 +26,7 @@ export class LoginComponent implements OnInit {
   }
 
   submit(): void {
-    this.http.post('http://localhost:8000/api/login', this.form.getRawValue(), {
+    this.http.post('http://gfive.herokuapp.com/api/users/login/', this.form.getRawValue(), {
       withCredentials: true
     }).subscribe(() => this.router.navigate(['/']));
   }

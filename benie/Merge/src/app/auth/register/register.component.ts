@@ -20,14 +20,14 @@ export class RegisterComponent implements OnInit {
 
   ngOnInit(): void {
     this.form = this.formBuilder.group({
-      name: '',
+      username: '',
       email: '',
       password: ''
     });
   }
 
   submit(): void {
-    this.http.post('http://localhost:8000/api/register', this.form.getRawValue())
+    this.http.post('http://gfive.herokuapp.com/api/users/register/', this.form.getRawValue())
       .subscribe(() => this.router.navigate(['/login']));
   }
 }
