@@ -1,13 +1,13 @@
 <div class="comments">
     <h3 class="comments-title">Comments</h3>
     <div class="comment-form-title">Write comment</div>
-    <comment-form
+    <app-comment-form
       submitLabel="Write"
       (handleSubmit)="addComment({ text: $event, parentId: null })"
     >
-    </comment-form>
+    </app-comment-form>
     <div class="comments-container">
-      <comment
+      <app-comment
         *ngFor="let rootComment of getRootComments()"
         [comment]="rootComment"
         [replies]="getReplies(rootComment.id)"
@@ -18,6 +18,6 @@
         (updateComment)="updateComment($event)"
         [currentUserId]="currentUserId"
       >
-      </comment>
+      </app-comment>
     </div>
   </div>

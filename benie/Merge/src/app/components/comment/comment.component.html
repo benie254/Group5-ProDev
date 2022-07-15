@@ -8,7 +8,7 @@
         <div>{{ createdAt }}</div>
       </div>
       <div class="comment-text" *ngIf="!isEditing()">{{ comment.body }}</div>
-      <comment-form
+      <app-comment-form
         *ngIf="isEditing()"
         submitLabel="Update"
         [hasCancelButton]="true"
@@ -17,7 +17,7 @@
           updateComment.emit({ text: $event, commentId: comment.id })
         "
         (handleCancel)="setActiveComment.emit(null)"
-      ></comment-form>
+      ></app-comment-form>
       <div class="comment-actions">
         <div
           *ngIf="canReply"
@@ -51,13 +51,13 @@
           Delete
         </div>
       </div>
-      <comment-form
+      <app-comment-form
         *ngIf="isReplying()"
         submitLabel="Reply"
         (handleSubmit)="addComment.emit({ text: $event, parentId: replyId })"
-      ></comment-form>
+      ></app-comment-form>
       <div class="replies" *ngIf="replies.length > 0">
-        <comment
+        <app-comment
           *ngFor="let reply of replies"
           [comment]="reply"
           (setActiveComment)="setActiveComment.emit($event)"
@@ -68,7 +68,7 @@
           [parentId]="comment.id"
           [replies]="[]"
           [currentUserId]="currentUserId"
-        ></comment>
+        ></app-comment>
       </div>
     </div>
   </div>

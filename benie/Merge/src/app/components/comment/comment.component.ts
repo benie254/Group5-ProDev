@@ -4,10 +4,12 @@ import { ActiveCommentTypeEnum } from '../../types/activeCommentType.enum';
 import { CommentInterface } from '../../types/comment.interface';
 
 @Component({
-  selector: 'comment',
+  selector: 'app-comment',
   templateUrl: './comment.component.html',
+  styleUrls: ['./comment.component.css']
 })
 export class CommentComponent implements OnInit {
+
   @Input() comment!: CommentInterface;
   @Input() activeComment!: ActiveCommentInterface | null;
   @Input() replies!: CommentInterface[];
@@ -65,4 +67,5 @@ export class CommentComponent implements OnInit {
       this.activeComment.type === 'editing'
     );
   }
+
 }

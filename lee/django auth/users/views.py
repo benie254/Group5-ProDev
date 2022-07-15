@@ -4,6 +4,9 @@ from rest_framework.exceptions import AuthenticationFailed
 from .serializers import UserSerializer
 from .models import User
 import jwt, datetime
+from rest_framework.generics import CreateAPIView
+from rest_framework import permissions
+from django.core.mail import send_mail
 
 
 # Create your views here.
@@ -11,7 +14,9 @@ class RegisterView(APIView):
     def post(self, request):
         serializer = UserSerializer(data=request.data)
         serializer.is_valid(raise_exception=True)
+        email=serializer.validated_data['email']
         serializer.save()
+        send_mail('Welcome', 'Good to have you on board', 'doyoadoyo@gmail.com', [email], fail_silently=False)
         return Response(serializer.data)
 
 
